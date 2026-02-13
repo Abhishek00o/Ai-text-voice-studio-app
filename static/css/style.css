@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    min-height: 100vh;
+}
+
+/* Animated Background */
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Glass Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(18px);
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: 0.4s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Navbar */
+.glass-nav {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+}
+
+/* Inputs */
+.form-control, .form-select {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+}
+
+.form-control::placeholder {
+    color: #ddd;
+}
+
+.form-control:focus {
+    background: rgba(255,255,255,0.3);
+    box-shadow: none;
+}
+
+/* Neon Gradient Button */
+.btn-gradient {
+    background: linear-gradient(45deg, #ff00cc, #3333ff);
+    border: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    border-radius: 30px;
+}
+
+.btn-gradient:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #ff00cc;
+}
+
+/* Other buttons */
+.btn-success, .btn-warning, .btn-danger {
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* Heading Glow */
+h2, h3, h4 {
+    text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}

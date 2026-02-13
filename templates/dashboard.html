@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="text-center text-white mb-5">
+    <h2>✨ AI Text & Voice Studio</h2>
+    <p>Convert • Translate • Listen in multiple languages</p>
+</div>
+
+<div class="row">
+
+<div class="col-md-6 mb-4">
+<div class="glass-card">
+    <h4 class="mb-3">🎙 Text to Speech</h4>
+    <form action="/convert" method="POST">
+        <textarea name="text" class="form-control mb-3" placeholder="Enter text..."></textarea>
+
+        <select name="language" class="form-select mb-3">
+            <option value="en">🇬🇧 English</option>
+            <option value="hi">🇮🇳 Hindi</option>
+            <option value="pa">🟣 Punjabi</option>
+            <option value="fr">🇫🇷 French</option>
+            <option value="es">🇪🇸 Spanish</option>
+            <option value="de">🇩🇪 German</option>
+        </select>
+
+        <button class="btn btn-gradient w-100">Convert</button>
+    </form>
+</div>
+</div>
+
+<div class="col-md-6 mb-4">
+<div class="glass-card">
+    <h4 class="mb-3">🌍 Translate</h4>
+    <form action="/translate" method="POST">
+        <textarea name="text" class="form-control mb-3" placeholder="Enter text..."></textarea>
+
+        <select name="language" class="form-select mb-3">
+            <option value="en">🇬🇧 English</option>
+            <option value="hi">🇮🇳 Hindi</option>
+            <option value="pa">🟣 Punjabi</option>
+            <option value="fr">🇫🇷 French</option>
+            <option value="es">🇪🇸 Spanish</option>
+        </select>
+
+        <button class="btn btn-warning w-100">Translate</button>
+    </form>
+</div>
+</div>
+
+<div class="col-12">
+<div class="glass-card">
+    <h4 class="mb-3">📄 PDF to Speech</h4>
+    <form action="/pdf" method="POST" enctype="multipart/form-data">
+        <input type="file" name="pdf" class="form-control mb-3">
+        <button class="btn btn-success w-100">Convert PDF</button>
+    </form>
+</div>
+</div>
+
+</div>
+
+{% endblock %}
